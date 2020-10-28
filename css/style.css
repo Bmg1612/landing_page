@@ -1,11 +1,35 @@
-html {
+body {
   max-width: 100%;
   box-sizing: border-box;
   font-family: "Antic Slab", serif;
   font-size: 16px;
+  color: #1f2932;
+  background: linear-gradient(to right, #ffefba, #ffffff);
+}
+.grid__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content;
+  grid-template-areas:
+    "nav"
+    "main"
+    "footer";
+  gap: 20px;
 }
 
+.page__header {
+  display: flex;
+  grid-area: nav;
+  width: 100%;
+}
 
+.page__main {
+  display: flex;
+  grid-area: main;
+  flex-direction: column;
+  width: 100%;
+  text-align: justify;
+}
 
 .heading__page {
   font-family: "Henny Penny", cursive;
@@ -15,4 +39,9 @@ html {
 
 .heading__section {
   font-family: "Henny Penny", cursive;
+}
+
+.page__footer {
+  grid-area: footer;
+  width: 100%;
 }
