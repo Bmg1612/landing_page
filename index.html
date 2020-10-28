@@ -10,100 +10,122 @@
 </head>
 
 <body>
-    <div class="grid__container">
+    <div class="gri__container">
         <header class="page__header">
             <nav class="navbar__menu">
                 <!-- Navigation starts as empty UL that will be populated with JS -->
                 <ul id="navbar__list"></ul>
             </nav>
         </header>
-        <!-- Each Section has an ID (used for the anchor) and 
-        a data attribute that will populate the li node.
-        Adding more sections will automatically populate nav.
-        The first section is set to active class by default -->
-        <main class="page__main">
-            <h1 class="heading__page">Landing page</h1>
-            <section id="section1" data-nav="Section 1" class="your-active-class section__box">
-                <h2 class="heading__section">Section 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus
-                    pharetra
-                    dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex.
-                    Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec
-                    bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue.
-                    Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam
-                    porttitor
-                    lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit.
-                    Integer
-                    nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-
-                <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit,
-                    vel
-                    luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-                    consectetur
-                    porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-            </section>
-            <section id="section2" data-nav="Section 2" class="section__box">
-                <h2 class="heading__section">Section 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus
-                    pharetra
-                    dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex.
-                    Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec
-                    bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue.
-                    Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam
-                    porttitor
-                    lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit.
-                    Integer
-                    nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-
-                <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit,
-                    vel
-                    luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-                    consectetur
-                    porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-            </section>
-            <section id="section3" data-nav="Section 3" class="section__box">
-                <h2 class="heading__section">Section 3</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus
-                    pharetra
-                    dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex.
-                    Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec
-                    bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue.
-                    Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam
-                    porttitor
-                    lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit.
-                    Integer
-                    nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-
-                <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit,
-                    vel
-                    luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-                    consectetur
-                    porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-            </section>
+        <main class="page__main" style="border: 2px solid blue;">
+            <h1 class="heading__page">Landing Page </h1>
+            <p class="introduction__text">Why someone would buy your product? (up to 5 lines)</p>
+            <button type="button" class="page__button">Buy here!</button>
             <section id="section1" data-nav="Section 1" class="your-active-class">
-                <h2 class="heading__section">Section 4</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus
-                    pharetra
-                    dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex.
-                    Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec
-                    bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue.
-                    Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam
-                    porttitor
-                    lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit.
-                    Integer
-                    nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-
-                <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit,
-                    vel
-                    luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-                    consectetur
-                    porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+                <div class="landing__container">
+                    <h2 class="heading__section">More motives</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus
+                        pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
+                        lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac
+                        tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar
+                        quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in
+                        mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum
+                        non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in
+                        tellus. Sed congue et odio sed euismod.</p>
+                    <p>Morbi porttitor auctor enim, sit amet sagittis odio suscipit eu. Vestibulum rutrum mollis dolor,
+                        non tristique lacus luctus ac. Integer in ipsum eget nisl pellentesque imperdiet ac vel sapien.
+                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In
+                        mi dui, sagittis in erat id, rutrum efficitur nisi. Fusce varius risus enim, vitae accumsan eros
+                        tincidunt sit amet. Phasellus blandit finibus eros eu suscipit. Morbi eget dictum leo. Integer
+                        eu accumsan tellus. Pellentesque est mauris, consectetur non elit a, elementum posuere lorem. In
+                        sit amet mattis urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris volutpat
+                        ornare massa eget iaculis.</p>
+                    <p>Nunc molestie leo non cursus volutpat. Nam aliquam volutpat finibus. Cras rhoncus nec nisl sit
+                        amet pretium. Nullam scelerisque neque urna. Nam eget volutpat augue, eget lobortis enim. Proin
+                        hendrerit eu risus sed tempus. Nunc non lacinia sem, nec suscipit arcu. Praesent rutrum urna ut
+                        justo ornare, ac blandit erat fermentum. Duis sed leo augue. Etiam euismod aliquet eros eu
+                        gravida.</p>
+                </div>
             </section>
+            <section id="section2" data-nav="Section 2">
+                <div class="landing__container">
+                    <h2 class="heading__section">Images/ Screenshots of your product</h2>
+                    <img src="img/product.jpg" alt="Product" class="product__image">
+                    <p>Morbi porttitor auctor enim, sit amet sagittis odio suscipit eu. Vestibulum rutrum mollis dolor,
+                        non tristique lacus luctus ac. Integer in ipsum eget nisl pellentesque imperdiet ac vel sapien.
+                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In
+                        mi dui, sagittis in erat id, rutrum efficitur nisi. Fusce varius risus enim, vitae accumsan eros
+                        tincidunt sit amet. Phasellus blandit finibus eros eu suscipit. Morbi eget dictum leo. Integer
+                        eu accumsan tellus. Pellentesque est mauris, consectetur non elit a, elementum posuere lorem. In
+                        sit amet mattis urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris volutpat
+                        ornare massa eget iaculis.</p>
+                    <p>Nunc molestie leo non cursus volutpat. Nam aliquam volutpat finibus. Cras rhoncus nec nisl sit
+                        amet pretium. Nullam scelerisque neque urna. Nam eget volutpat augue, eget lobortis enim. Proin
+                        hendrerit eu risus sed tempus. Nunc non lacinia sem, nec suscipit arcu. Praesent rutrum urna ut
+                        justo ornare, ac blandit erat fermentum. Duis sed leo augue. Etiam euismod aliquet eros eu
+                        gravida.</p>
+                </div>
+            </section>
+            <section id="section3" data-nav="Section 3">
+                <div class="landing__container">
+                    <h2 class="heading__section">Good reviews of your product</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus
+                        pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
+                        lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac
+                        tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar
+                        quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in
+                        mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum
+                        non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in
+                        tellus. Sed congue et odio sed euismod.</p>
+                    <p>Morbi porttitor auctor enim, sit amet sagittis odio suscipit eu. Vestibulum rutrum mollis dolor,
+                        non tristique lacus luctus ac. Integer in ipsum eget nisl pellentesque imperdiet ac vel sapien.
+                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In
+                        mi dui, sagittis in erat id, rutrum efficitur nisi. Fusce varius risus enim, vitae accumsan eros
+                        tincidunt sit amet. Phasellus blandit finibus eros eu suscipit. Morbi eget dictum leo. Integer
+                        eu accumsan tellus. Pellentesque est mauris, consectetur non elit a, elementum posuere lorem. In
+                        sit amet mattis urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris volutpat
+                        ornare massa eget iaculis.</p>
+                    <p>Nunc molestie leo non cursus volutpat. Nam aliquam volutpat finibus. Cras rhoncus nec nisl sit
+                        amet pretium. Nullam scelerisque neque urna. Nam eget volutpat augue, eget lobortis enim. Proin
+                        hendrerit eu risus sed tempus. Nunc non lacinia sem, nec suscipit arcu. Praesent rutrum urna ut
+                        justo ornare, ac blandit erat fermentum. Duis sed leo augue. Etiam euismod aliquet eros eu
+                        gravida.</p>
+                </div>
+            </section>
+            <section id="section3" data-nav="Section 4">
+                <div class="landing__container">
+                    <h2 class="heading__section">Maybe later?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus
+                        pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
+                        lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac
+                        tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar
+                        quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in
+                        mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum
+                        non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in
+                        tellus. Sed congue et odio sed euismod.</p>
+                    <p>Morbi porttitor auctor enim, sit amet sagittis odio suscipit eu. Vestibulum rutrum mollis dolor,
+                        non tristique lacus luctus ac. Integer in ipsum eget nisl pellentesque imperdiet ac vel sapien.
+                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In
+                        mi dui, sagittis in erat id, rutrum efficitur nisi. Fusce varius risus enim, vitae accumsan eros
+                        tincidunt sit amet. Phasellus blandit finibus eros eu suscipit. Morbi eget dictum leo. Integer
+                        eu accumsan tellus. Pellentesque est mauris, consectetur non elit a, elementum posuere lorem. In
+                        sit amet mattis urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris volutpat
+                        ornare massa eget iaculis.</p>
+                    <p>Nunc molestie leo non cursus volutpat. Nam aliquam volutpat finibus. Cras rhoncus nec nisl sit
+                        amet pretium. Nullam scelerisque neque urna. Nam eget volutpat augue, eget lobortis enim. Proin
+                        hendrerit eu risus sed tempus. Nunc non lacinia sem, nec suscipit arcu. Praesent rutrum urna ut
+                        justo ornare, ac blandit erat fermentum. Duis sed leo augue. Etiam euismod aliquet eros eu
+                        gravida.</p>
+                </div>
+            </section>
+            <button type="button" class="page__button">Let's keep talking</button>
         </main>
+        <footer class="page__footer" style="border: 2px solid green;">
+            <h1 class="heading__section">Add me!</h1>
+            <p><a href="https://github.com/Bmg1612" class="contact">Github</a></p>
+            <p><a href="https://www.linkedin.com/in/bruno-gurgel/" class="contact">Linkedin</a></p>
+        </footer>
     </div>
-    <footer class="page__footer">
-        <p>&copy Udacity</p>
-    </footer>
 </body>
 
 </html>
