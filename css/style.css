@@ -1,0 +1,18 @@
+html {
+  max-width: 100%;
+  box-sizing: border-box;
+  font-family: "Antic Slab", serif;
+  font-size: 16px;
+}
+
+
+
+.heading__page {
+  font-family: "Henny Penny", cursive;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.heading__section {
+  font-family: "Henny Penny", cursive;
+}
