@@ -13,11 +13,10 @@
     <div class="grid__container">
         <header class="page__header">
             <nav class="navbar__menu">
-                <!-- Navigation starts as empty UL that will be populated with JS -->
-                <ul id="navbar__list"></ul>
+                <ul id="navbar__list" class="menu__list"></ul>
             </nav>
         </header>
-        <section class="banner__hero">
+        <div class="banner__hero">
             <h1 class="heading__page">Landing Page </h1>
             <div class="banner__center">
                 <ul class="motives__list__banner">
@@ -38,14 +37,9 @@
             <button type="button" class="page__button">Buy here!</button>
             <p class="introduction__text">Why someone would buy your product? (up to 5 lines)</p>
             <button type="button" class="page__button">More info here!</button>
-        </section>
+        </div>
         <main class="page__main">
-            <!-- <div class="banner__hero">
-                <h1 class="heading__page">Landing Page </h1>
-                <p class="introduction__text">Why someone would buy your product? (up to 5 lines)</p>
-                <button type="button" class="page__button">Buy here!</button>
-            </div> -->
-            <section id="section1" data-nav="Section 1" class="your-active-class section__box">
+            <section id="section1" data-nav="More motives" class="your-active-class section__box">
                 <h2 class=" heading__section">More motives</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus
                     pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
@@ -69,7 +63,7 @@
                     justo ornare, ac blandit erat fermentum. Duis sed leo augue. Etiam euismod aliquet eros eu
                     gravida.</p>
             </section>
-            <section id="section2" data-nav="Section 2" class="section__box section__2">
+            <section id="section2" data-nav="Images" class="section__box section__2">
                 <h2 class="heading__section">Images/ Screenshots of your product</h2>
                 <img src="img/product.jpg" alt="Product" class="product__image">
                 <p>Morbi porttitor auctor enim, sit amet sagittis odio suscipit eu. Vestibulum rutrum mollis dolor,
@@ -86,7 +80,7 @@
                     justo ornare, ac blandit erat fermentum. Duis sed leo augue. Etiam euismod aliquet eros eu
                     gravida.</p>
             </section>
-            <section id="section3" data-nav="Section 3" class="section__box section__3">
+            <section id="section3" data-nav="Reviews" class="section__box section__3">
                 <h2 class="heading__section">Good reviews of your product</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus
                     pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
@@ -110,7 +104,7 @@
                     justo ornare, ac blandit erat fermentum. Duis sed leo augue. Etiam euismod aliquet eros eu
                     gravida.</p>
             </section>
-            <section id="section3" data-nav="Section 4" class="section__box section__4">
+            <section id="section4" data-nav="Maybe later" class="section__box section__4">
                 <h2 class="heading__section">Maybe later?</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus
                     pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
@@ -142,6 +136,7 @@
             <p><a href="https://www.linkedin.com/in/bruno-gurgel/" class="contact">Linkedin</a></p>
         </footer>
     </div>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

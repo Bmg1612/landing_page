@@ -23,7 +23,6 @@ body {
 }
 
 .page__header {
-  display: flex;
   grid-area: nav;
   width: 100%;
 }
@@ -78,7 +77,7 @@ body {
 }
 
 .section__2 {
-  display: block;
+  display: none;
 }
 
 .section__3 {
@@ -170,6 +169,35 @@ body {
 
 /* Desktop layout */
 @media screen and (min-width: 901px) {
+  .page__header {
+    /* border: 2px solid blue; */
+    border-bottom: 2px inset #000000;
+  }
+
+  .navbar__menu {
+    /* border: 2px solid green; */
+  }
+
+  .menu__list {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Henny Penny", cursive;
+    list-style-type: none;
+    /* border: 2px solid red; */
+  }
+
+  .menu__link {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.3rem;
+    border-radius: 25px;
+    padding: 5px;
+  }
+
+  .menu__link:hover {
+    background-color: #657482;
+  }
+
   .banner__center {
     display: flex;
     justify-content: space-between;
