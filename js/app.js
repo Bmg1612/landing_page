@@ -1,69 +1,35 @@
-/**
- * 
- * Manipulating the DOM exercise.
- * Exercise programmatically builds navigation,
- * scrolls to anchors from navigation,
- * and highlights section in viewport upon scrolling.
- * 
- * Dependencies: None
- * 
- * JS Version: ES2015/ES6
- * 
- * JS Standard: ESlint
- * 
-*/
-
-/**
- * Define Global Variables
- * 
-*/
-// const navBar = document.querySelector("#navbar__list");
-const pageMain = document.querySelector(".page__main");
 const sections = document.getElementsByTagName("section");
 const fragment = document.createDocumentFragment();
 const navBar = document.querySelector("#navbar__list");
 
-
-/**
- * End Global Variables
- * Start Helper Functions
- * 
-*/
-
-
-
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
 function createNavBar () {
-for (section of sections) {
-    const newElement = document.createElement('li');
-    newElement.innerHTML = `<a class="menu__link "href="#${section.id}"> ${section.dataset.nav}</a>`;
-    fragment.appendChild(newElement);
-}
-
-    navBar.appendChild(fragment);
-}
-
-// build the nav
+    for (section of sections) {
+        const newElement = document.createElement('li');
+        newElement.innerHTML = `<a class="menu__link" id="menu__${section.id}" href="#${section.id}"> ${section.dataset.nav}</a>`;
+        fragment.appendChild(newElement);
+    }
+        navBar.appendChild(fragment);
+        
+    }
+    
+    
 createNavBar();
 
-// Add class 'active' to section when near top of viewport
+const menuLink = document.querySelectorAll(".menu__link");
+const firstSection = document.querySelector('#section1');
+const secondSection = document.querySelector('#section2');
+const thirdSection = document.querySelector('#section3');
+const fourthSection = document.querySelector('#section4');
 
-
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
+for (item of menuLink) {
+    item.addEventListener("click", function showContent (event) {
+        if (event.target.id === "menu__section1") {
+            firstSection.style.display = "block"; } 
+        if (event.target.id === "menu__section2") {
+            secondSection.style.display = "block"; }
+        if (event.target.id === "menu__section3") {
+            thirdSection.style.display = "block"; }
+        if (event.target.id === "menu__section4") {
+            fourthSection.style.display = "block"; }
+ })
+}
