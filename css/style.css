@@ -1,11 +1,15 @@
-/* Universal layout */
+/*
+============================
+Universal layout
+============================
+*/
 body {
   max-width: 100%;
   box-sizing: border-box;
   font-family: "Antic Slab", serif;
   font-size: 16px;
   color: #1f2932;
-  background: linear-gradient(#ffefba, #ffffff);
+  background: linear-gradient(to bottom, #ffefba, #ffffff);
   padding: 0px;
   margin: 0px;
 }
@@ -24,7 +28,6 @@ p {
     "main"
     "footer";
   max-width: 100%;
-  /* border: 2px solid red; */
 }
 
 .page__header {
@@ -32,10 +35,29 @@ p {
   width: 100%;
 }
 
+.menu__list {
+  font-family: "Henny Penny", cursive;
+  list-style-type: none;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.3rem;
+  border-radius: 25px;
+  padding: 5px;
+  border-bottom: 2px inset #000000;
+}
+
 .banner__hero {
   text-align: center;
   grid-area: banner;
   border-bottom: 2px dotted #000000;
+}
+
+.motives__item {
+  list-style-image: url(../img/tick-mark.svg);
+  font-weight: bold;
 }
 
 .heading__page {
@@ -46,7 +68,7 @@ p {
 
 .page__button {
   border: 2px inset #000000;
-  padding: 10px;
+  padding: 12px;
   margin: 20px 0;
   font-size: 2rem;
   background-color: #ffff00;
@@ -56,6 +78,10 @@ p {
 .page__button:hover {
   font-weight: bold;
   background-color: #9acd32;
+}
+
+.introduction__text {
+  text-align: center;
 }
 
 .page__main {
@@ -75,6 +101,12 @@ p {
   text-align: center;
 }
 
+.product__image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Setting the display to none, will change onclick with JS */
 .your-active-class,
 .section__2,
@@ -87,9 +119,6 @@ p {
   display: none;
 }
 
-/* .text {
-  text-align: justify;
-} */
 .section__4 {
   text-align: center;
   display: none;
@@ -113,52 +142,118 @@ p {
   text-align: center;
 }
 
-/* Mobile layout */
-.motives__list__banner {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-}
+/*
+============================
+Mobile layout
+============================
+*/
+@media screen and (max-width: 599px) {
+  .mobile__menu {
+    display: inline-block;
+    cursor: pointer;
+  }
 
-.motives__item {
-  list-style-image: url(../img/tick-mark.svg);
-  font-weight: bold;
-}
+  /* Creating the sandwich menu */
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 2rem;
+    height: 0.3rem;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
 
-.motives__item::marker {
-  font-size: 3rem;
-}
+  .menu__list {
+    display: none;
+    overflow: hidden;
+    position: relative;
+    padding: 0px;
+  }
 
-.page__button {
-  border: 2px inset #000000;
-  padding: 10px;
-  margin: 20px 0;
-  font-size: 2rem;
-  background-color: #ffff00;
-  text-align: center;
-}
+  .menu__link {
+    display: block;
+    margin-bottom: 10px;
+    padding: 12px;
+    font-size: 1.3rem;
+    border-radius: 25px;
+    border-bottom: 2px inset #000000;
+    width: 50%;
+  }
 
-.introduction__text {
-  font-size: 1.2rem;
-  text-align: center;
-}
-
-.product__image {
-  width: 100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Tablet layout */
-@media screen and (min-width: 600px) and (max-width: 900px) {
   .motives__list__banner {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    font-size: 1.3rem;
+  }
+
+  .motives__item::marker {
+    font-size: 4rem;
+  }
+
+  .introduction__text {
+    font-size: 1.2rem;
+  }
+
+  .product__image {
+    width: 100%;
+  }
+}
+
+/*
+============================ 
+Tablet layout 
+============================
+*/
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .mobile__menu {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  /* Creating the sandwich menu */
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 2rem;
+    height: 0.3rem;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .menu__list {
+    display: none;
+    overflow: hidden;
+    position: relative;
+    padding: 0px;
+  }
+
+  .menu__link {
+    display: block;
+    margin-bottom: 10px;
+    padding: 12px;
+    font-size: 1.3rem;
+    border-radius: 25px;
+    border-bottom: 2px inset #000000;
+    width: 50%;
+  }
+
+  .motives__list__banner {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     width: 20%;
   }
 
   .motives__item {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+  }
+
+  .motives__item::marker {
+    font-size: 4rem;
   }
 
   .page__button {
@@ -170,11 +265,17 @@ p {
   }
 }
 
-/* Desktop layout */
+/*
+============================
+Desktop layout
+============================
+*/
 @media screen and (min-width: 901px) {
-  .page__header {
-    /* border: 2px solid blue; */
-    border-bottom: 2px inset #000000;
+  .mobile__menu,
+  .change .bar1,
+  .change .bar2,
+  .change .bar3 {
+    display: none;
   }
 
   .menu__list {
@@ -182,7 +283,7 @@ p {
     justify-content: space-between;
     font-family: "Henny Penny", cursive;
     list-style-type: none;
-    /* border: 2px solid red; */
+    background-color: #ffefba;
   }
 
   .menu__link {
@@ -191,6 +292,7 @@ p {
     font-size: 1.3rem;
     border-radius: 25px;
     padding: 5px;
+    border-bottom: 2px inset #000000;
   }
 
   .menu__link:hover {
@@ -201,18 +303,15 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    /* border: 2px solid green; */
   }
 
   .motives__list__banner {
     text-align: left;
     width: 20%;
     margin-left: auto;
-    /* border: 2px solid yellow; */
   }
 
   .motives__item {
-    /* border: 2px solid black; */
     font-size: 2rem;
   }
 
@@ -224,7 +323,6 @@ p {
     display: block;
     margin-right: auto;
     font-style: italic;
-    /* border: 2px solid red; */
     width: 40%;
     height: 100%;
   }
@@ -235,8 +333,5 @@ p {
 
   .product__image {
     width: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
   }
 }

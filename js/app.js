@@ -1,7 +1,9 @@
+// Global variables
 const sections = document.getElementsByTagName("section");
 const fragment = document.createDocumentFragment();
 const navBar = document.querySelector("#navbar__list");
 
+// Function that creates dynamically the NavBar
 function createNavBar () {
     for (section of sections) {
         const newElement = document.createElement('li');
@@ -10,17 +12,26 @@ function createNavBar () {
     }
         navBar.appendChild(fragment);
         
-    }
+}
     
-    
+// Calling the function    
 createNavBar();
 
+// Showing the sections content only when the linked Nav button is clicked
 const menuLink = document.querySelectorAll(".menu__link");
 const navList = document.querySelector('.navbar__menu');
 
-  navList.addEventListener('click', function showContent (event) {
-      let currentSelection = event.target.id;
-      let sectionNumber = currentSelection.slice(-1);
-      let element = document.querySelector('#section'+sectionNumber);
-      element.style.display = "block";
+navList.addEventListener('click', function showContent (event) {
+    let currentSelection = event.target.id;
+    let sectionNumber = currentSelection.slice(-1);
+    let element = document.querySelector('#section'+sectionNumber);
+    element.style.display = "block";
     })   
+
+// Function to display the menu list on Mobile & Tablet layouts    
+// Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon
+function toggleMenu() {
+    if (navBar.style.display === "block") {
+        navBar.style.display = "none";
+    } else {navBar.style.display = "block"}
+}  

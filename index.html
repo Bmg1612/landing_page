@@ -13,6 +13,12 @@
     <div class="grid__container">
         <header class="page__header">
             <nav class="navbar__menu">
+                <!--Mobile menu - won't appear on Desktop view-->
+                <div class="mobile__menu" onclick="toggleMenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
                 <ul id="navbar__list" class="menu__list"></ul>
             </nav>
         </header>
@@ -25,6 +31,7 @@
                     <li class="motives__item">Great motive</li>
                     <li class="motives__item">Great motive</li>
                 </ul>
+                <!--This review will only appear here on Desktop view-->
                 <q class="quote__review"><b>Great review from one of your customers</b><br><br> Lorem ipsum dolor sit
                     amet,
                     consectetur adipiscing elit. Morbi fermentum metus faucibus lectus
@@ -38,6 +45,7 @@
             <p class="introduction__text">Why someone would buy your product? (up to 5 lines)</p>
             <button type="button" class="page__button">More info here!</button>
         </div>
+        <!--The sections will only appear when the appropriate button is clicked-->
         <main class="page__main">
             <section id="section1" data-nav="More motives" class="your-active-class section__box">
                 <h2 class=" heading__section">More motives</h2>
