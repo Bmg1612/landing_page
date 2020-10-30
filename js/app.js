@@ -16,20 +16,11 @@ function createNavBar () {
 createNavBar();
 
 const menuLink = document.querySelectorAll(".menu__link");
-const firstSection = document.querySelector('#section1');
-const secondSection = document.querySelector('#section2');
-const thirdSection = document.querySelector('#section3');
-const fourthSection = document.querySelector('#section4');
+const navList = document.querySelector('.navbar__menu');
 
-for (item of menuLink) {
-    item.addEventListener("click", function showContent (event) {
-        if (event.target.id === "menu__section1") {
-            firstSection.style.display = "block"; } 
-        if (event.target.id === "menu__section2") {
-            secondSection.style.display = "block"; }
-        if (event.target.id === "menu__section3") {
-            thirdSection.style.display = "block"; }
-        if (event.target.id === "menu__section4") {
-            fourthSection.style.display = "block"; }
- })
-}
+  navList.addEventListener('click', function showContent (event) {
+      let currentSelection = event.target.id;
+      let sectionNumber = currentSelection.slice(-1);
+      let element = document.querySelector('#section'+sectionNumber);
+      element.style.display = "block";
+    })   

@@ -68,7 +68,6 @@ p {
   padding: 0 10px 0 5px;
   gap: 5px;
   height: 100%;
-  /* border: 2px solid blue; */
 }
 
 .heading__section {
@@ -102,13 +101,16 @@ p {
   text-align: center;
   display: block;
   border-top: 2px dotted #000000;
-  /* border: 2px solid green; */
 }
 
 .contact {
   text-decoration: underline;
   color: #000000;
   font-size: 1.2rem;
+}
+
+.contact-text {
+  text-align: center;
 }
 
 /* Mobile layout */
@@ -139,6 +141,7 @@ p {
 
 .introduction__text {
   font-size: 1.2rem;
+  text-align: center;
 }
 
 .product__image {
