@@ -18,6 +18,10 @@ p {
   text-align: justify;
 }
 
+.active {
+  background-color: #ffae0c;
+}
+
 .grid__container {
   display: grid;
   grid-template-columns: 1fr;
@@ -71,14 +75,14 @@ p {
   padding: 12px;
   margin: 20px 0;
   font-size: 2rem;
-  background-color: #ffff00;
+  background-color: #ffae0c;
   text-align: center;
   cursor: pointer;
 }
 
 .page__button:hover {
   font-weight: bold;
-  background-color: #9acd32;
+  background-color: #ffff00;
 }
 
 .introduction__text {
@@ -109,7 +113,7 @@ p {
 }
 
 /* Setting the display to none, will change onclick with JS */
-.your-active-class,
+.section__1,
 .section__2,
 .section__3,
 /* 
