@@ -73,6 +73,7 @@ p {
   font-size: 2rem;
   background-color: #ffff00;
   text-align: center;
+  cursor: pointer;
 }
 
 .page__button:hover {

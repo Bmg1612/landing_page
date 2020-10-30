@@ -2,6 +2,7 @@
 const sections = document.getElementsByTagName("section");
 const fragment = document.createDocumentFragment();
 const navBar = document.querySelector("#navbar__list");
+const button = document.querySelector("#buttonContent");
 
 // Function that creates dynamically the NavBar
 function createNavBar () {
@@ -34,4 +35,12 @@ function toggleMenu() {
     if (navBar.style.display === "block") {
         navBar.style.display = "none";
     } else {navBar.style.display = "block"}
-}  
+} 
+
+// If the button 'More info here' is clicked, all the content appears.
+button.addEventListener ('click', function () {
+    for (section of sections) {
+        section.style.display = 'block';
+    }
+})
+
