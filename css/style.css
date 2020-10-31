@@ -56,7 +56,8 @@ p {
 .banner__hero {
   text-align: center;
   grid-area: banner;
-  border-bottom: 2px dotted #000000;
+  box-shadow: 3px 5px 20px 20px #ccc;
+  margin-bottom: 10px;
 }
 
 .motives__item {
@@ -68,6 +69,8 @@ p {
   font-family: "Henny Penny", cursive;
   font-size: 4rem;
   text-align: center;
+  text-decoration: none;
+  color: #1f2932;
 }
 
 .page__button {
@@ -134,7 +137,6 @@ p {
   width: 100%;
   text-align: center;
   display: block;
-  border-top: 2px dotted #000000;
 }
 
 .contact {

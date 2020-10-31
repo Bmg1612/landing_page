@@ -3,6 +3,7 @@ const sections = document.getElementsByTagName("section");
 const fragment = document.createDocumentFragment();
 const navBar = document.querySelector("#navbar__list");
 const button = document.querySelector("#buttonContent");
+const footer = document.querySelector(".page__footer");
 
 // Function that creates dynamically the NavBar
 function createNavBar (event) {
@@ -35,6 +36,8 @@ function showSection () {
             let sectionNumber = currentSelection.slice(-1);
             let element = document.querySelector('#section'+sectionNumber);
             element.style.display = "block";
+            //Add border onlu when a section is shown
+            footer.setAttribute('style', 'border-top: 2px inset #ccc;');
         }  
     })
 }    
@@ -73,6 +76,7 @@ function toggleMenu() {
 button.addEventListener ('click', function () {
     for (section of sections) {
         section.style.display = 'block';
+        footer.setAttribute('style', 'border-top: 2px inset #ccc;');
         // And no menu item is highlighted
         let oldItem = document.querySelectorAll(".active");
             for (element of oldItem) {
