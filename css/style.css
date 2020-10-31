@@ -57,7 +57,7 @@ p {
   text-align: center;
   grid-area: banner;
   box-shadow: 3px 5px 20px 20px #ccc;
-  margin-bottom: 10px;
+  margin: 15px 0;
 }
 
 .motives__item {
@@ -188,6 +188,11 @@ Mobile layout
     width: 50%;
   }
 
+  .banner__hero {
+    box-shadow: 3px 5px 20px 10px #ccc;
+    margin: 20px 0;
+  }
+
   .motives__list__banner {
     text-align: center;
     margin-left: auto;
@@ -246,6 +251,11 @@ Tablet layout
     border-radius: 25px;
     border-bottom: 2px inset #000000;
     width: 50%;
+  }
+
+  .banner__hero {
+    box-shadow: 3px 5px 20px 10px #ccc;
+    margin: 20px 0;
   }
 
   .motives__list__banner {
