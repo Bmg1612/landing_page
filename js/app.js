@@ -66,7 +66,9 @@ function activeItem (){
 activeItem();
 // Function to display the menu list on Mobile & Tablet layouts    
 // Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon
-function toggleMenu() {
+function toggleMenu(menu) {
+    // Menu animation
+    menu.classList.toggle("change");
     if (navBar.style.display === "block") {
         navBar.style.display = "none";
     } else {navBar.style.display = "block"}
@@ -84,4 +86,3 @@ button.addEventListener ('click', function () {
             }
     }
 })
-

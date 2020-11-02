@@ -67,6 +67,38 @@ p {
   border-bottom: 2px inset #000000;
 }
 
+/* Creating the sandwich menu */
+.mobile__menu {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 2rem;
+  height: 0.3rem;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
 .banner__hero {
   text-align: center;
   grid-area: banner;
@@ -171,22 +203,6 @@ Mobile layout
 ============================
 */
 @media screen and (max-width: 599px) {
-  .mobile__menu {
-    display: inline-block;
-    cursor: pointer;
-  }
-
-  /* Creating the sandwich menu */
-  .bar1,
-  .bar2,
-  .bar3 {
-    width: 2rem;
-    height: 0.3rem;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-  }
-
   .menu__list {
     display: none;
     overflow: hidden;
@@ -236,22 +252,6 @@ Tablet layout
 ============================
 */
 @media screen and (min-width: 600px) and (max-width: 900px) {
-  .mobile__menu {
-    display: inline-block;
-    cursor: pointer;
-  }
-
-  /* Creating the sandwich menu */
-  .bar1,
-  .bar2,
-  .bar3 {
-    width: 2rem;
-    height: 0.3rem;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-  }
-
   .menu__list {
     display: none;
     overflow: hidden;
