@@ -22,6 +22,20 @@ p {
   background-color: #ffae0c;
 }
 
+.skip-link {
+  top: -50px;
+  position: absolute;
+  background-color: #ff0000;
+  left: 0px;
+  color: #ffffff;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 .grid__container {
   display: grid;
   grid-template-columns: 1fr;
@@ -83,9 +97,11 @@ p {
   cursor: pointer;
 }
 
-.page__button:hover {
+.page__button:hover,
+.page__button:focus {
   font-weight: bold;
   background-color: #ffff00;
+  text-decoration: underline;
 }
 
 .introduction__text {
@@ -145,7 +161,7 @@ p {
   font-size: 1.2rem;
 }
 
-.contact-text {
+.contact__text {
   text-align: center;
 }
 
@@ -312,7 +328,8 @@ Desktop layout
     border-bottom: 2px inset #000000;
   }
 
-  .menu__link:hover {
+  .menu__link:hover,
+  .menu__link:focus {
     background-color: #657482;
   }
 
