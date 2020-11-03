@@ -1,14 +1,16 @@
 // Global variables
-const sections = document.getElementsByTagName("section");
-const fragment = document.createDocumentFragment();
 const navBar = document.querySelector("#navbar__list");
+const fixedHeadings = document.querySelectorAll(".fixed__heading");
+const sections = document.getElementsByTagName("section");
 const button = document.querySelector("#buttonContent");
 const footer = document.querySelector(".page__footer");
+const fragment = document.createDocumentFragment();
 
 // Function that creates dynamically the NavBar
 function createNavBar (event) {
     for (section of sections) {
         let newElement = document.createElement('li');
+        // REMOVE IF
         if (section.id == "section1") {
             newElement.innerHTML = `<a class="active menu__link" id="menu__${section.id}" href="#${section.id}"> ${section.dataset.nav}</a>`;
             fragment.appendChild(newElement);
@@ -29,6 +31,7 @@ const navList = document.querySelector('.navbar__menu');
 // Showing the sections content only when the linked Nav button is clicked
 function showSection () {
     navList.addEventListener('click', function showContent (event) {
+        event.preventDefault();
         for (section of sections) {
             section.style.display = "none";
             let currentSelection = event.target.id;
@@ -37,6 +40,7 @@ function showSection () {
             element.style.display = "block";
             //Add border only when a section is shown
             footer.setAttribute('style', 'border-top: 2px inset #ccc;');
+            element.scrollIntoView({behavior: "smooth"});
         }  
     })
 }    
@@ -73,15 +77,12 @@ function toggleMenu(menu) {
     } else {navBar.style.display = "block"}
 } 
 
-// If the button 'More info here' is clicked, all the content appears.
-button.addEventListener ('click', function () {
-    for (section of sections) {
-        section.style.display = 'block';
-        footer.setAttribute('style', 'border-top: 2px inset #ccc;');
-        // And no menu item is highlighted
-        let oldItem = document.querySelectorAll(".active");
-            for (element of oldItem) {
-            element.classList.remove("active");
-            }
-    }
-})
+// if (section.id == "section1") {
+//     newElement.innerHTML = `<a class="active menu__link" id="menu__${section.id}" href="#${section.id}"> ${section.dataset.nav}</a>`;
+//     fragment.appendChild(newElement);
+// } else {
+//     newElement.innerHTML = `<a class="menu__link" id="menu__${section.id}" href="#${section.id}"> ${section.dataset.nav}</a>`;
+//     fragment.appendChild(newElement);
+// }    
+// }
+// navBar.appendChild(fragment);
