@@ -8,7 +8,7 @@ const footer = document.querySelector(".page__footer");
 // Function that creates dynamically the NavBar
 function createNavBar (event) {
     for (section of sections) {
-        const newElement = document.createElement('li');
+        let newElement = document.createElement('li');
         if (section.id == "section1") {
             newElement.innerHTML = `<a class="active menu__link" id="menu__${section.id}" href="#${section.id}"> ${section.dataset.nav}</a>`;
             fragment.appendChild(newElement);
@@ -19,15 +19,14 @@ function createNavBar (event) {
     }
         navBar.appendChild(fragment);
         
-}
-    
-// Calling the function    
+}   
 createNavBar();
 
-// Showing the sections content only when the linked Nav button is clicked
+//Variables made with the navbar
 const menuLink = document.querySelectorAll(".menu__link");
 const navList = document.querySelector('.navbar__menu');
 
+// Showing the sections content only when the linked Nav button is clicked
 function showSection () {
     navList.addEventListener('click', function showContent (event) {
         for (section of sections) {
@@ -36,16 +35,16 @@ function showSection () {
             let sectionNumber = currentSelection.slice(-1);
             let element = document.querySelector('#section'+sectionNumber);
             element.style.display = "block";
-            //Add border onlu when a section is shown
+            //Add border only when a section is shown
             footer.setAttribute('style', 'border-top: 2px inset #ccc;');
         }  
     })
 }    
 showSection();
 
-// Highlights the clicked item. Initially no item is highlighted
+// Highlights the clicked menu item. Initially no item is highlighted
 function activeItem (){
-    const initialActive = document.querySelector(".active");
+    let initialActive = document.querySelector(".active");
     initialActive.classList.remove("active");
 
     for (item of menuLink) {
@@ -62,8 +61,8 @@ function activeItem (){
         })
     }
 }
-
 activeItem();
+
 // Function to display the menu list on Mobile & Tablet layouts    
 // Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon
 function toggleMenu(menu) {
