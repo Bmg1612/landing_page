@@ -22,7 +22,7 @@ p {
 
 /* Header */
 .active {
-  background-color: #ffae0c;
+  background-color: #6ea3c5;
 }
 
 .skip-link {
@@ -106,7 +106,7 @@ p {
 .banner__hero {
   text-align: center;
   grid-area: banner;
-  box-shadow: 3px 5px 20px 20px #ccc;
+  box-shadow: 5px 5px 20px 20px #ccc;
   margin: 15px 0;
 }
 
@@ -122,6 +122,7 @@ p {
   text-align: center;
   text-decoration: none;
   color: #1f2932;
+  /* margin-top: 20px; */
 }
 
 .page__button {
@@ -146,6 +147,7 @@ p {
 }
 
 .page__main {
+  grid-area: main;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -316,6 +318,16 @@ Desktop layout
 ============================
 */
 @media screen and (min-width: 901px) {
+  .grid__container {
+    grid-template-columns: 15% 85%;
+    grid-template-rows: min-content;
+    grid-template-areas:
+      "nav banner"
+      "nav main"
+      "nav footer";
+    max-width: 100%;
+  }
+
   /* Header */
   .mobile__menu,
   .change .bar1,
@@ -324,12 +336,30 @@ Desktop layout
     display: none;
   }
 
+  .page__header {
+    position: fixed;
+    width: 15%;
+    top: 0;
+    height: 100vh;
+    z-index: 1;
+    background-color: #ffc85a;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    cursor: pointer;
+    box-shadow: 10px 1px 10px 5px #ccc;
+  }
+
+  .navbar__menu {
+    height: 100vh;
+  }
+
   .menu__list {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
     font-family: "Henny Penny", cursive;
     list-style-type: none;
-    background-color: #ffefba;
   }
 
   .menu__link {
@@ -347,6 +377,15 @@ Desktop layout
   }
 
   /* Banner */
+
+  .banner__hero {
+    margin: 0px;
+  }
+
+  .heading__page {
+    margin-top: 5px;
+  }
+
   .banner__center {
     display: flex;
     justify-content: space-between;
@@ -380,7 +419,12 @@ Desktop layout
   }
 
   /* Main content */
+  .page__main {
+    padding: 50px;
+  }
+
   .product__image {
     width: 50%;
+    margin-bottom: 30px;
   }
 }
