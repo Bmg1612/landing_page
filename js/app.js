@@ -9,21 +9,14 @@ const fragment = document.createDocumentFragment();
 
 // Function that creates dynamically the NavBar
 function createNavBar (event) {
-    for (section of sections) {
+    for (let section of sections) {
         let newElement = document.createElement('li');
-        // REMOVE IF
-        if (section.id == "section1") {
-            newElement.innerHTML = `<a class="active menu__link" id="menu__${section.id}" href="#${section.id}"> ${section.dataset.nav}</a>`;
-            fragment.appendChild(newElement);
-        } else {
-            newElement.innerHTML = `<a class="menu__link" id="menu__${section.id}" href="#${section.id}"> ${section.dataset.nav}</a>`;
-            fragment.appendChild(newElement);
-        }    
+        newElement.innerHTML = `<a class="menu__link" id="menu__${section.id}" href="#${section.id}"> ${section.dataset.nav}</a>`;
+        fragment.appendChild(newElement);
     }
-        navBar.appendChild(fragment);
-        
-}   
-createNavBar();
+    navBar.appendChild(fragment);    
+}        
+createNavBar()
 
 //Variables made with the navbar
 const menuLink = document.querySelectorAll(".menu__link");
@@ -33,7 +26,7 @@ const navList = document.querySelector('.navbar__menu');
 function showSection () {
     navList.addEventListener('click', function showContent (event) {
         event.preventDefault();
-        for (section of sections) {
+        for (let section of sections) {
             section.style.display = "none";
             let currentSelection = event.target.id;
             let sectionNumber = currentSelection.slice(-1);
@@ -49,17 +42,14 @@ showSection();
 
 // Highlights the clicked menu item. Initially no item is highlighted
 function activeItem (){
-    let initialActive = document.querySelector(".active");
-    initialActive.classList.remove("active");
-
-    for (item of menuLink) {
+    for (let item of menuLink) {
         item.addEventListener('click', function (event) {
-            initialActive.className += " active";
+            let current = event.target.id;
+            current.className += " active";
             let oldItem = document.querySelectorAll(".active");
-            for (element of oldItem) {
+            for (let element of oldItem) {
             element.classList.remove("active");
             }
-            let current = event.target.id;
             let newActive = document.getElementById(current);
             newActive.className += " active"; 
         })
@@ -84,11 +74,7 @@ But if the user scrolls back to the section it gets highlighted again
 */ 
 window.addEventListener('scroll', function highlightViewport() {
     let activeItem = document.querySelector(".active");
-    if (isInViewport(button)) {
-        activeItem.style.backgroundColor = "#ffc85a";
-    } else {
-        activeItem.style.backgroundColor = "";
-    }
+    activeItem.style.backgroundColor = isInViewport(button) ? "#ffc85a" : "";
 })
 
 // Function to display the menu list on Mobile & Tablet layouts    
@@ -99,4 +85,4 @@ function toggleMenu(menu) {
     if (navBar.style.display === "block") {
         navBar.style.display = "none";
     } else {navBar.style.display = "block"}
-} 
+}
