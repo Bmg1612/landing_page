@@ -82,12 +82,12 @@ function isInViewport(element) {
 If the banner's button is on the viewport, no menu item is highlighted
 But if the user scrolls back to the section it gets highlighted again 
 */ 
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', function highlightViewport() {
     let activeItem = document.querySelector(".active");
     if (isInViewport(button)) {
         activeItem.style.backgroundColor = "#ffc85a";
     } else {
-        activeItem.style.backgroundColor = "#6ea3c5";
+        activeItem.style.backgroundColor = "";
     }
 })
 
