@@ -1,10 +1,11 @@
 // Global variables
 const navBar = document.querySelector("#navbar__list");
-const fixedHeadings = document.querySelectorAll(".fixed__heading");
+const banner = document.querySelector(".banner__hero");
 const sections = document.getElementsByTagName("section");
-const button = document.querySelector("#buttonContent");
+const button = document.querySelector("#banner__button");
 const footer = document.querySelector(".page__footer");
 const fragment = document.createDocumentFragment();
+
 
 // Function that creates dynamically the NavBar
 function createNavBar (event) {
@@ -60,12 +61,35 @@ function activeItem (){
             }
             let current = event.target.id;
             let newActive = document.getElementById(current);
-            newActive.className += " active";
-            
+            newActive.className += " active"; 
         })
     }
 }
 activeItem();
+
+// Helper function to see if an element is on the viewport
+function isInViewport(element) {
+    let bounding = element.getBoundingClientRect();
+    return (
+        bounding.top >= 0 &&
+        bounding.left >= 0 &&
+        bounding.bottom <= (window.innerHeight) &&
+        bounding.right <= (window.innerWidth)
+    );
+};
+
+/*
+If the banner's button is on the viewport, no menu item is highlighted
+But if the user scrolls back to the section it gets highlighted again 
+*/ 
+window.addEventListener('scroll', function () {
+    let activeItem = document.querySelector(".active");
+    if (isInViewport(button)) {
+        activeItem.style.backgroundColor = "#ffc85a";
+    } else {
+        activeItem.style.backgroundColor = "#6ea3c5";
+    }
+})
 
 // Function to display the menu list on Mobile & Tablet layouts    
 // Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon
@@ -76,13 +100,3 @@ function toggleMenu(menu) {
         navBar.style.display = "none";
     } else {navBar.style.display = "block"}
 } 
-
-// if (section.id == "section1") {
-//     newElement.innerHTML = `<a class="active menu__link" id="menu__${section.id}" href="#${section.id}"> ${section.dataset.nav}</a>`;
-//     fragment.appendChild(newElement);
-// } else {
-//     newElement.innerHTML = `<a class="menu__link" id="menu__${section.id}" href="#${section.id}"> ${section.dataset.nav}</a>`;
-//     fragment.appendChild(newElement);
-// }    
-// }
-// navBar.appendChild(fragment);

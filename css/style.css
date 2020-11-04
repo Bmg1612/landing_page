@@ -419,7 +419,7 @@ Desktop layout
   }
 
   /* Main content */
-  .page__main {
+  .section__box {
     padding: 50px;
   }
 
