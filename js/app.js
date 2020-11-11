@@ -1,13 +1,11 @@
 // Global variables
-const navBar = document.querySelector("#navbar__list");
-const bannerMotives = document.querySelector(".motives__list__banner");
 const sections = document.getElementsByTagName("section");
-const footer = document.querySelector(".page__footer");
-const fragment = document.createDocumentFragment();
-
 
 // Function that creates dynamically the NavBar
 createNavBar = (event) => {
+    const navBar = document.querySelector("#navbar__list");
+    const fragment = document.createDocumentFragment();
+
     for (let section of sections) {
         let newElement = document.createElement('li');
         newElement.innerHTML = `<a class="menu__link" id="menu__${section.id}" href="#${section.id}"> ${section.dataset.nav}</a>`;
@@ -18,11 +16,12 @@ createNavBar = (event) => {
 createNavBar()
 
 //Variables made with the navbar
-const menuLink = document.querySelectorAll(".menu__link");
-const navList = document.querySelector('.navbar__menu');
 
 // Showing the sections content only when the linked Nav button is clicked
 showSection = () => {
+    const navList = document.querySelector('.navbar__menu');
+    const footer = document.querySelector(".page__footer");
+
     navList.addEventListener('click', showContent = (event) => {
         event.preventDefault();
         for (let section of sections) {
@@ -41,6 +40,8 @@ showSection();
 
 // Highlights the clicked menu item. Initially no item is highlighted
 activeItem = () => {
+    const menuLink = document.querySelectorAll(".menu__link");
+
     for (let item of menuLink) {
         item.addEventListener('click', function (event) {
             let current = event.target.id;
@@ -61,6 +62,8 @@ If the banner's motives list is on the viewport, no menu item is highlighted
 But if the user scrolls back to the section it gets highlighted again 
 */ 
 observingEvent = () => {
+    const bannerMotives = document.querySelector(".motives__list__banner");
+
     let options = {
         root: document.querySelector("#viewport"), //default
         rootMargin: "0px", //default
