@@ -24,3 +24,7 @@ I highlighted the section being viewed by hiding the others. When an item of the
 
 ## Contributions
 Any contributtions and/or suggestions are greatly appreciated.
+
+## License
+
+[MIT License](https://opensource.org/licenses/MIT).
