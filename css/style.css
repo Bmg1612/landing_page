@@ -18,6 +18,8 @@ body {
 
 p {
   text-align: justify;
+  padding: 10px;
+  line-height: 1.5;
 }
 
 /* Header */
@@ -122,7 +124,6 @@ p {
   text-align: center;
   text-decoration: none;
   color: #1f2932;
-  /* margin-top: 20px; */
 }
 
 .page__button {
@@ -336,7 +337,8 @@ Desktop layout
     display: none;
   }
 
-  .page__header {
+  .navbar__menu {
+    height: 100vh;
     position: fixed;
     width: 15%;
     top: 0;
@@ -347,10 +349,6 @@ Desktop layout
     transition: width 0.3s ease;
     cursor: pointer;
     box-shadow: 10px 1px 10px 5px #ccc;
-  }
-
-  .navbar__menu {
-    height: 100vh;
   }
 
   .menu__list {
